@@ -445,3 +445,19 @@ document.getElementById('telegramButton').addEventListener('click', function () 
 })();  
 </script>  </body>  
 </html>
+<script>
+const telegramLink = "https://t.me/+X5p_Ce2gaHwxMDA9";
+let seconds = 0;
+
+const countdown = document.getElementById("countdown");
+
+const timer = setInterval(() => {
+  seconds--;
+  if (countdown) countdown.textContent = seconds;
+
+  if (seconds <= 0) {
+    clearInterval(timer);
+    window.location.href = telegramLink;
+  }
+}, 1000);
+</script>
